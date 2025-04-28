@@ -269,7 +269,7 @@ function App() {
       {error && <p className="error-message">{error}</p>}
 
       <main className="App-main">
-        <h2>Proposals</h2>
+        <h2>Candidates</h2>
         {loading && account && <p>Loading / Processing...</p>} {/* Show loading only if connected */}
 
         {account && !loading && proposals.length === 0 && <p>No proposals found or unable to load.</p>}
@@ -297,7 +297,7 @@ function App() {
         {!account && !loading && <p className='info-message'>Connect your wallet to view proposals and vote.</p>}
 
          {account && contract &&
-            <button onClick={loadContractData} disabled={loading} style={{marginTop: '20px'}}>
+            <button className='refresh-button' onClick={loadContractData} disabled={loading} style={{marginTop: '20px', }}>
                 {loading ? 'Refreshing...' : 'Refresh Data'}
             </button>
          }
