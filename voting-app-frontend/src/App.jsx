@@ -8,15 +8,6 @@ import "./App.css";
 // Get contract address and ABI from the imported JSON file
 const CONTRACT_ADDRESS = contractInfo.address;
 const CONTRACT_ABI = contractInfo.abi; // This ABI is expected to match the 'proposal' contract
-import contractInfo from './contractInfo.json';
-// ... other imports ...
-
-// Add this log:
-console.log("Verifying ABI loaded:", Array.isArray(contractInfo.abi) ? contractInfo.abi.map(item => item.name || item.type).join(', ') : 'ABI not an array or missing');
-
-
-
-
 
 function App() {
   // States for provider, signer, contract instance
